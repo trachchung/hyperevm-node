@@ -6,15 +6,15 @@ services:
     build: .
     ports:
       - "4000-4010:4000-4010"
+      - "3001:3001"
     volumes:
-      - hl-data:/home/hluser/hl/data
+      - /root/hyperliquid-node-data-docker:/home/hluser/hl/data
 
   pruner:
     restart: unless-stopped
     build: ./pruner
     volumes:
-      - hl-data:/home/hluser/hl/data
-
+      - /root/hyperliquid-node-data-docker:/home/hluser/hl/data
 
 volumes:
   hl-data:

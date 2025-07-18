@@ -1,3 +1,16 @@
+# How to run docker
+
+```bash
+#grant permission to users to create volumes at root on host machine
+sudo mkdir -p /root/hyperliquid-node-data-docker
+sudo chown 10000:10000 /root/hyperliquid-node-data-docker
+#check access right
+ls -ld /root/hyperliquid-node-data-docker
+#run docker compose 
+docker compose -d 
+```
+
+
 # Running a node
 
 ## Machine Specs
